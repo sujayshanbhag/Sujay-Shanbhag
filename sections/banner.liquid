@@ -1,8 +1,10 @@
 <div class="gift-banner">
   <div class="gift-banner__top-half">
     <div class="gift-banner__top-bar">
+      <span class="gift-banner__hamburger">&#9776;</span>
       <div class="gift-banner__logo">{{ section.settings.logo_text }}</div>
       <div class="gift-banner__subheading">{{ section.settings.top_subheading }}</div>
+      <div class="gift-banner__spacer"></div>
       <button class="gift-banner__btn gift-banner__btn--yellow btn-animate">
         {{ section.settings.top_button_label }} →
       </button>
@@ -15,7 +17,12 @@
     <div class="gift-banner__main-row">
       <div class="gift-banner__main-content">
         <h1>{{ section.settings.main_heading }}</h1>
-        <p>{{ section.settings.description }}</p>
+        <p class="gift-banner__desc gift-banner__desc--desktop">
+          {{ section.settings.description }}
+        </p>
+        <p class="gift-banner__desc gift-banner__desc--mobile">
+          {{ section.settings.description_mobile }}
+        </p>
         <button href="{{ section.settings.bottom_button_link }}" class="gift-banner__btn gift-banner__btn--black btn-animate">
           {{ section.settings.bottom_button_label }} →
         </button>
@@ -44,13 +51,19 @@
   /* === Top Bar === */
   .gift-banner__top-bar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #f8f8f8;
     gap: 24px;
     padding-left: 32px;
     padding-right: 32px;
+    position: relative;
   }
+
+  .gift-banner__spacer {
+    width: 40px;
+    flex-shrink: 0;
+  }
+  
   .gift-banner__logo {
     font-weight: bold;
     font-size: 1.2em;
@@ -249,12 +262,70 @@
     transform: translateY(-3px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
+
+  /* === mobile responsiveness === */
+  @media (max-width: 767px) {
+    .gift-banner__subheading {
+      display: none;
+    }
+    .gift-banner__hamburger {
+      display: inline-block;
+      font-size: 2em;
+      margin-right: 12px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+    .gift-banner__top-bar .gift-banner__btn {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .gift-banner__hamburger {
+      display: none;
+    }
+    .gift-banner__subheading {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .gift-banner__subheading--desktop,
+    .gift-banner__desc--desktop {
+      display: none;
+    }
+    .gift-banner__subheading--mobile,
+    .gift-banner__desc--mobile {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) {
+    .gift-banner__subheading--mobile,
+    .gift-banner__desc--mobile {
+      display: none;
+    }
+    .gift-banner__subheading--desktop,
+    .gift-banner__desc--desktop {
+      display: block;
+    }
+  }
 </style>
 
 {% schema %}
 {
   "name": "Custom Gift Banner",
   "settings": [
+    {
+      "type": "textarea",
+      "id": "description_mobile",
+      "label": "Description (Mobile)",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
+    },
+    {
+      "type": "text",
+      "id": "top_subheading_mobile",
+      "label": "Top Subheading (Mobile)",
+      "default": "SUSTAINABLY ETHICALLY MADE ACTIVEWEAR."
+    },
     {
       "type": "text",
       "id": "logo_text",
