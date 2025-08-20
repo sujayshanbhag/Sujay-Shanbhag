@@ -54,11 +54,12 @@
         "item_iad6Cc": {
           "type": "item",
           "settings": {
-            "title": "",
-            "description": "",
-            "price": "",
-            "color1": "",
-            "color2": ""
+            "image": "shopify://shop_images/leather-jacket-and-tea_925x_2490cde1-7e61-4151-9a65-de8a763bc701.jpg",
+            "title": "Green Trench Coat",
+            "description": "Green Trench Coat",
+            "price": "980,00€",
+            "color1": "White",
+            "color2": "Black"
           }
         },
         "item_ErprdN": {
