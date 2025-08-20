@@ -29,6 +29,50 @@
     "grid_QMYFnF": {
       "type": "grid",
       "blocks": {
+        "item_FicWgT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/black-bag-over-the-shoulder_925x_4cae5708-5e9e-4e7e-96ec-9649f0c20cd8.jpg",
+            "title": "Orange Wide Leg",
+            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+            "price": "980,00€",
+            "color1": "White",
+            "color2": "Black"
+          }
+        },
+        "item_xXDjRw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg",
+            "title": "Tailored Jacket",
+            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+            "price": "980,00€",
+            "color1": "Blue",
+            "color2": "Black"
+          }
+        },
+        "item_ErprdN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/red-plaid-shirt_925x_70e9e5a8-8fc5-4d60-9a9a-cc2e0dd57cc9.jpg",
+            "title": "Accordion Pleated Dress",
+            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+            "price": "980,00€",
+            "color1": "Red",
+            "color2": "Grey"
+          }
+        },
+        "item_iad6Cc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/leather-jacket-and-tea_925x_2490cde1-7e61-4151-9a65-de8a763bc701.jpg",
+            "title": "Green Trench Coat",
+            "description": "Green Trench Coat",
+            "price": "980,00€",
+            "color1": "White",
+            "color2": "Black"
+          }
+        },
         "item_7h7fHR": {
           "type": "item",
           "settings": {
@@ -49,49 +93,6 @@
             "price": "980,00€",
             "color1": "Blue",
             "color2": "Black"
-          }
-        },
-        "item_iad6Cc": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/leather-jacket-and-tea_925x_2490cde1-7e61-4151-9a65-de8a763bc701.jpg",
-            "title": "Green Trench Coat",
-            "description": "Green Trench Coat",
-            "price": "980,00€",
-            "color1": "White",
-            "color2": "Black"
-          }
-        },
-        "item_ErprdN": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/red-plaid-shirt_925x_70e9e5a8-8fc5-4d60-9a9a-cc2e0dd57cc9.jpg",
-            "title": "Accordion Pleated Dress",
-            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
-            "price": "980,00€",
-            "color1": "Red",
-            "color2": "Grey"
-          }
-        },
-        "item_xXDjRw": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg",
-            "title": "Tailored Jacket",
-            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
-            "price": "980,00€",
-            "color1": "Blue",
-            "color2": "Black"
-          }
-        },
-        "item_FicWgT": {
-          "type": "item",
-          "settings": {
-            "title": "",
-            "description": "",
-            "price": "",
-            "color1": "",
-            "color2": ""
           }
         },
         "item_FabLC8": {
@@ -116,12 +117,12 @@
         }
       },
       "block_order": [
+        "item_FicWgT",
+        "item_xXDjRw",
+        "item_ErprdN",
+        "item_iad6Cc",
         "item_7h7fHR",
         "item_tmgAYf",
-        "item_iad6Cc",
-        "item_ErprdN",
-        "item_xXDjRw",
-        "item_FicWgT",
         "item_FabLC8",
         "item_YBtiY6"
       ],
