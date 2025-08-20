@@ -1,0 +1,390 @@
+<div class="gift-banner">
+  <div class="gift-banner__top-half">
+    <div class="gift-banner__top-bar">
+      <span class="gift-banner__hamburger">&#9776;</span>
+      <div class="gift-banner__logo">{{ section.settings.logo_text }}</div>
+      <div class="gift-banner__subheading">{{ section.settings.top_subheading }}</div>
+      <div class="gift-banner__spacer"></div>
+      <button class="gift-banner__btn gift-banner__btn--yellow btn-animate">
+        {{ section.settings.top_button_label }} →
+      </button>
+    </div>
+    <div class="gift-banner__svg-row">
+      <img src="{{ 'banner.svg' | asset_url }}" alt="Banner" class="gift-banner__svg-full" />
+    </div>
+  </div>
+  <div class="gift-banner__bottom-half">
+    <div class="gift-banner__main-row">
+      <div class="gift-banner__main-content">
+        <h1>{{ section.settings.main_heading }}</h1>
+        <p class="gift-banner__desc gift-banner__desc--desktop">
+          {{ section.settings.description }}
+        </p>
+        <p class="gift-banner__desc gift-banner__desc--mobile">
+          {{ section.settings.description_mobile }}
+        </p>
+        <button href="{{ section.settings.bottom_button_link }}" class="gift-banner__btn gift-banner__btn--black btn-animate">
+          {{ section.settings.bottom_button_label }} →
+        </button>
+      </div>
+      <div class="gift-banner__svg-side">
+        <img src="{{ 'banner.svg' | asset_url }}" alt="Banner" class="gift-banner__svg-side-img" />
+      </div>
+    </div>
+    <div class="sandwich-bars">
+      {{ section.settings.footer_text }}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* === Banner Container === */
+  .gift-banner {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* === Top Bar === */
+  .gift-banner__top-bar {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    gap: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+  }
+
+  .gift-banner__spacer {
+    width: 40px;
+    flex-shrink: 0;
+  }
+  
+  .gift-banner__logo {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .gift-banner__subheading {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 1em;
+    color: #444;
+  }
+  .gift-banner__top-bar .gift-banner__btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  /* === First Row SVG (Cropped, Bottom Half) === */
+  .gift-banner__svg-row {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .gift-banner__svg-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+  }
+
+  /* === Main Row (Content + SVG) === */
+  .gift-banner__main-row {
+    display: flex;
+    width: 100%;
+    height: calc(50vh - 40px); 
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* === Main Content (Left) === */
+  .gift-banner__main-content {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    padding: 16px 28px 28px 16px;
+    margin: 0 0 0 32px;
+    max-width: 400px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  .gift-banner__main-content .gift-banner__btn {
+    margin-top: 8px;
+    display: inline-block; 
+    align-self: flex-start; 
+  }
+  
+  .gift-banner__main-content h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+  }
+  .gift-banner__main-content p {
+    font-size: 1.1em;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+  }
+  .gift-banner__main-content .gift-banner__btn {
+    margin-top: 8px;
+  }
+
+  /* === Second Row SVG (Cropped Top Left) === */
+  .gift-banner__svg-side {
+    flex: 1 1 0%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    margin-left: 0;
+    height: 100%;
+  }
+  .gift-banner__svg-side-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    display: block;
+  }
+
+  .gift-banner__bottom-half {
+    height: 50vh;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .gift-banner__main-row {
+    flex: 1 1 0;
+    display: flex;
+    min-height: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* === Footer === */
+  .sandwich-bars {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background: #f8f8f8;
+    min-height: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* === Buttons === */
+  .gift-banner__btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid black;
+    transition: color 0.3s;
+    z-index: 1;
+  }
+  .gift-banner__btn--yellow {
+    background: yellow;
+    color: black;
+  }
+  .gift-banner__btn--black {
+    background: black;
+    color: white;
+  }
+  .gift-banner__btn::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: left 0.3s;
+  }
+  .gift-banner__btn--yellow::before {
+    background: black;
+  }
+  .gift-banner__btn--black::before {
+    background: yellow;
+  }
+  .gift-banner__btn--yellow:hover {
+    color: white;
+  }
+  .gift-banner__btn--yellow:hover::before {
+    left: 0;
+  }
+  .gift-banner__btn--black:hover {
+    color: black;
+  }
+  .gift-banner__btn--black:hover::before {
+    left: 0;
+  }
+  .gift-banner__bottom-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    border: 1px solid black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* === Footer Text === */
+  .gift-banner__footer {
+    background: #f8f8f8;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  /* === Button Hover Animation === */
+  .btn-animate {
+    transition: all 0.3s ease;
+  }
+  .btn-animate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* === mobile responsiveness === */
+  @media (max-width: 767px) {
+    .gift-banner__subheading {
+      display: none;
+    }
+    .gift-banner__hamburger {
+      display: inline-block;
+      font-size: 2em;
+      margin-right: 12px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+    .gift-banner__top-bar .gift-banner__btn {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .gift-banner__hamburger {
+      display: none;
+    }
+    .gift-banner__subheading {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .gift-banner__subheading--desktop,
+    .gift-banner__desc--desktop {
+      display: none;
+    }
+    .gift-banner__subheading--mobile,
+    .gift-banner__desc--mobile {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) {
+    .gift-banner__subheading--mobile,
+    .gift-banner__desc--mobile {
+      display: none;
+    }
+    .gift-banner__subheading--desktop,
+    .gift-banner__desc--desktop {
+      display: block;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Gift Banner",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "description_mobile",
+      "label": "Description (Mobile)",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
+    },
+    {
+      "type": "text",
+      "id": "top_subheading_mobile",
+      "label": "Top Subheading (Mobile)",
+      "default": "SUSTAINABLY ETHICALLY MADE ACTIVEWEAR."
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo Text",
+      "default": "TISSO VISON"
+    },
+    {
+      "type": "text",
+      "id": "top_subheading",
+      "label": "Top Subheading",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "top_button_label",
+      "label": "Top Button Label",
+      "default": "CHOOSE GIFT"
+    },
+    {
+      "type": "url",
+      "id": "top_button_link",
+      "label": "Top Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "bottom_button_label",
+      "label": "Bottom Button Label",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "url",
+      "id": "bottom_button_link",
+      "label": "Bottom Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Gift Banner"
+    }
+  ]
+}
+{% endschema %}
