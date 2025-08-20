@@ -98,11 +98,12 @@
         "item_FabLC8": {
           "type": "item",
           "settings": {
-            "title": "",
-            "description": "",
-            "price": "",
-            "color1": "",
-            "color2": ""
+            "image": "shopify://shop_images/smiling-woman-on-snowy-afternoon_925x_bdcaf0cb-c761-46c3-a529-bd1e7849dc43.jpg",
+            "title": "Soft Winter Jacket",
+            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+            "price": "980,00€",
+            "color1": "Black",
+            "color2": "White"
           }
         },
         "item_YBtiY6": {
