@@ -65,6 +65,7 @@
         "item_ErprdN": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/red-plaid-shirt_925x_70e9e5a8-8fc5-4d60-9a9a-cc2e0dd57cc9.jpg",
             "title": "Accordion Pleated Dress",
             "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
             "price": "980,00€",
@@ -75,11 +76,12 @@
         "item_xXDjRw": {
           "type": "item",
           "settings": {
-            "title": "",
-            "description": "",
-            "price": "",
-            "color1": "",
-            "color2": ""
+            "image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg",
+            "title": "Tailored Jacket",
+            "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+            "price": "980,00€",
+            "color1": "Blue",
+            "color2": "Black"
           }
         },
         "item_FicWgT": {
